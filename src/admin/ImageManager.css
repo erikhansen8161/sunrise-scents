@@ -1,0 +1,191 @@
+.image-manager {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.upload-section {
+  margin-bottom: 40px;
+}
+
+.upload-area {
+  background: white;
+  border: 3px dashed rgba(139, 154, 122, 0.3);
+  border-radius: var(--border-radius);
+  padding: 60px 40px;
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+}
+
+.upload-area:hover {
+  border-color: var(--primary-sage);
+  background: rgba(139, 154, 122, 0.02);
+}
+
+.upload-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.upload-area h3 {
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+.upload-area p {
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  font-size: 1.1rem;
+}
+
+.file-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.upload-btn {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 14px 28px;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.upload-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.instructions-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.instructions-card {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-soft);
+  padding: 30px;
+}
+
+.instructions-card h3 {
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.instructions-card ol,
+.instructions-card ul {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding-left: 20px;
+}
+
+.instructions-card li {
+  margin-bottom: 8px;
+}
+
+.uploaded-images {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-soft);
+  padding: 30px;
+}
+
+.uploaded-images h3 {
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+}
+
+.images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.image-preview {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+}
+
+.image-preview:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.image-preview:hover .image-overlay {
+  opacity: 1;
+}
+
+.delete-btn {
+  background: #ff5252;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  transition: var(--transition);
+}
+
+.delete-btn:hover {
+  background: #ff1744;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .upload-area {
+    padding: 40px 20px;
+  }
+  
+  .upload-icon {
+    font-size: 3rem;
+  }
+  
+  .instructions-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .instructions-card {
+    padding: 24px;
+  }
+  
+  .images-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 16px;
+  }
+}

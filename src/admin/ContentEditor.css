@@ -1,0 +1,126 @@
+.content-editor {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-sections {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.sections-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section-btn {
+  background: white;
+  border: 2px solid rgba(139, 154, 122, 0.1);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: left;
+}
+
+.section-btn:hover {
+  border-color: var(--primary-sage);
+  box-shadow: var(--shadow-soft);
+}
+
+.section-btn.active {
+  border-color: var(--primary-sage);
+  background: rgba(139, 154, 122, 0.05);
+}
+
+.section-info h3 {
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.section-info p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.content-form {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-soft);
+  padding: 30px;
+}
+
+.content-form-section h3 {
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid rgba(139, 154, 122, 0.2);
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-sage);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.coming-soon {
+  color: var(--text-secondary);
+  font-style: italic;
+  background: var(--gradient-natural);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .content-sections {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .sections-nav {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  
+  .section-btn {
+    min-width: 250px;
+    padding: 16px;
+  }
+  
+  .content-form {
+    padding: 20px;
+  }
+}

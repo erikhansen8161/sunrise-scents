@@ -1,0 +1,278 @@
+.shop-page {
+  padding-top: 80px; /* Account for fixed header */
+}
+
+/* Shop Hero Section */
+.shop-hero {
+  background: var(--gradient-natural);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.shop-hero-content {
+  padding: 0 60px;
+  max-width: none;
+}
+
+.shop-hero-content h1 {
+  font-size: 3rem;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.shop-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+.made-in-badge {
+  display: inline-block;
+  background: var(--primary-sage);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+/* Filters Section */
+.shop-filters {
+  background: white;
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(139, 154, 122, 0.1);
+}
+
+.filters-content {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 60px;
+  max-width: none;
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 20px 14px 48px !important;
+  border: 2px solid rgba(139, 154, 122, 0.2);
+  border-radius: 30px;
+  font-size: 16px;
+  transition: var(--transition);
+  background-color: var(--color-white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-sage);
+  box-shadow: 0 2px 12px rgba(139, 154, 122, 0.15);
+}
+
+.search-input::placeholder {
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.category-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border: 2px solid rgba(139, 154, 122, 0.2);
+  background: transparent;
+  color: var(--text-primary);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.filter-btn:hover {
+  border-color: var(--primary-sage);
+  color: var(--primary-sage);
+}
+
+.filter-btn.active {
+  background: var(--primary-sage);
+  border-color: var(--primary-sage);
+  color: white;
+}
+
+/* Products Section */
+.products-section {
+  padding: 60px 0;
+}
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 0 60px;
+  max-width: none;
+}
+
+.products-header h2 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+}
+
+.products-count {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 0 60px;
+  max-width: none;
+}
+
+.no-products {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-secondary);
+}
+
+.no-products p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+  background: var(--gradient-natural);
+  padding: 60px 0;
+}
+
+.newsletter-content {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.newsletter-content h3 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.newsletter-content p {
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 14px 16px;
+  border: 2px solid rgba(139, 154, 122, 0.2);
+  border-radius: var(--border-radius);
+  font-size: 16px;
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: var(--primary-sage);
+}
+
+.newsletter-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.newsletter-checkbox input[type="checkbox"] {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shop-hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .shop-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .filters-content {
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+  }
+  
+  .search-box {
+    min-width: auto;
+  }
+  
+  .category-filters {
+    justify-content: center;
+  }
+  
+  .products-header {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  
+  .products-header h2 {
+    font-size: 2rem;
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  .newsletter-content h3 {
+    font-size: 1.8rem;
+  }
+}

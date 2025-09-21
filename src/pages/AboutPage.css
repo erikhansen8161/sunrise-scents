@@ -1,0 +1,504 @@
+.about-page {
+  padding-top: 80px;
+  overflow-x: hidden;
+}
+
+/* Hero Section - Brand Introduction */
+.about-hero {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="80" cy="40" r="1.5" fill="%23ffffff" opacity="0.08"/><circle cx="40" cy="80" r="1" fill="%23ffffff" opacity="0.12"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+  pointer-events: none;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero-content h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--primary-sage), var(--accent-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.brand-description {
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.brand-description p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.made-in-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--primary-sage), #6b8e5a);
+  color: white;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  box-shadow: 0 8px 32px rgba(139, 165, 116, 0.3);
+  transition: all 0.3s ease;
+}
+
+.made-in-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(139, 165, 116, 0.4);
+}
+
+/* Sofia's Story Section */
+.sofia-story {
+  background: white;
+  padding: 120px 0;
+  position: relative;
+}
+
+.story-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.story-header h2 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.story-subtitle {
+  font-size: 1.4rem;
+  color: var(--primary-sage);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.story-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.story-text {
+  position: relative;
+}
+
+.story-paragraph {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 32px;
+  text-align: justify;
+  position: relative;
+  padding-left: 24px;
+}
+
+.story-paragraph::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 4px;
+  height: 4px;
+  background: var(--accent-gold);
+  border-radius: 50%;
+}
+
+.story-paragraph:first-of-type {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.story-paragraph:first-of-type::before {
+  background: var(--primary-sage);
+  width: 6px;
+  height: 6px;
+}
+
+.founder-signature {
+  margin-top: 48px;
+  padding: 24px;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 16px;
+  border-left: 4px solid var(--primary-sage);
+}
+
+.founder-signature p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--primary-sage);
+  font-weight: 600;
+  text-align: center;
+}
+
+.story-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.visual-card {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  padding: 32px 24px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(139, 165, 116, 0.1);
+}
+
+.visual-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+  border-color: rgba(139, 165, 116, 0.2);
+}
+
+.visual-icon {
+  color: var(--primary-sage);
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.visual-card h4 {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.visual-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Founder Quote Section */
+.founder-quote {
+  background: linear-gradient(135deg, var(--primary-sage), #6b8e5a);
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.founder-quote::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="quote-pattern" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M25,10 Q35,20 25,30 Q15,20 25,10" fill="%23ffffff" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23quote-pattern)"/></svg>') repeat;
+  pointer-events: none;
+}
+
+.quote-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.quote-content h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 48px;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+
+.founder-quote-text {
+  font-size: 1.8rem;
+  color: white;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 0 0 32px 0;
+  position: relative;
+  padding: 0 40px;
+  font-weight: 300;
+}
+
+.founder-quote-text::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: -20px;
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: serif;
+}
+
+.founder-quote-text::after {
+  content: '"';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: serif;
+}
+
+.founder-signature-quote {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Company Info Section */
+.company-info {
+  background: #f8f9fa;
+  padding: 80px 0;
+}
+
+.company-details {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 48px;
+  border-radius: 24px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1);
+}
+
+.company-details h3 {
+  font-size: 2rem;
+  color: var(--primary-sage);
+  margin-bottom: 24px;
+  font-weight: 300;
+}
+
+.company-details p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.company-details strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Disclaimer Section */
+.disclaimer-section {
+  background: linear-gradient(135deg, #e9ecef, #dee2e6);
+  padding: 80px 0;
+}
+
+.disclaimer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 48px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.disclaimer-content h2 {
+  font-size: 2.2rem;
+  color: var(--text-primary);
+  margin-bottom: 32px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.disclaimer-text p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.disclaimer-contact {
+  font-size: 1.1rem;
+  color: var(--primary-sage);
+  font-weight: 500;
+  text-align: center;
+  margin-top: 32px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-sage);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .story-content {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .story-content {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  
+  .story-visual {
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .visual-card {
+    flex: 1;
+    padding: 24px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 80px 0;
+  }
+  
+  .about-hero-content h1 {
+    font-size: 2.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .brand-description p {
+    font-size: 1.1rem;
+  }
+  
+  .sofia-story {
+    padding: 80px 0;
+  }
+  
+  .story-header {
+    margin-bottom: 60px;
+  }
+  
+  .story-header h2 {
+    font-size: 2.5rem;
+  }
+  
+  .story-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .story-paragraph {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+  }
+  
+  .story-paragraph:first-of-type {
+    font-size: 1.2rem;
+  }
+  
+  .story-visual {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .visual-card {
+    padding: 24px;
+  }
+  
+  .founder-quote {
+    padding: 60px 0;
+  }
+  
+  .quote-content h2 {
+    font-size: 2rem;
+  }
+  
+  .founder-quote-text {
+    font-size: 1.4rem;
+    padding: 0 20px;
+  }
+  
+  .company-info {
+    padding: 60px 0;
+  }
+  
+  .company-details {
+    padding: 32px 24px;
+  }
+  
+  .company-details h3 {
+    font-size: 1.6rem;
+  }
+  
+  .disclaimer-section {
+    padding: 60px 0;
+  }
+  
+  .disclaimer-content {
+    padding: 32px 24px;
+  }
+  
+  .disclaimer-content h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .story-header h2 {
+    font-size: 2rem;
+  }
+  
+  .story-paragraph {
+    padding-left: 16px;
+    text-align: left;
+  }
+  
+  .founder-quote-text {
+    font-size: 1.2rem;
+    padding: 0 16px;
+  }
+  
+  .founder-quote-text::before,
+  .founder-quote-text::after {
+    font-size: 3rem;
+  }
+  
+  .made-in-badge {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
