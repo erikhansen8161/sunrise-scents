@@ -33,6 +33,9 @@ pids
 # Optional eslint cache
 .eslintcache
 
+# Node modules cache
+node_modules/.cache/
+
 # IDE
 .vscode/
 .idea/
